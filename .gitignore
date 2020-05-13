@@ -1,0 +1,7 @@
+*.prefs
+*.project
+*.classpath
+*.class
+cloning/.recommenders/caches/manual-mappings.json
+cloning/.recommenders/caches/identified-project-coordinates.json
+cloning/.metadata/

@@ -1,0 +1,95 @@
+Q1. What are main objective of java 1.8 version.
+Q2. What all features are available in java-1.8
+Q3. What are benefits of Lambda Expression ?
+Q4. Create a list of numbers from 1 to 10 using java-8.
+Q5. How to handle null values in streams? 
+	Optional : Instead of using null values Optional class is used for representing Optional values.
+	Java SE 8 introduces new class in util package i.e java.util.Optional . In a nutshell, you can view Optional as a single value container which either contains the value or not (then it is called as empty).
+	It is used to avoid NullPointerException. This Optional class concept is inspired from Haskell and Scala.
+Q6. What are the added features of java-8 in New Date and Time API.
+Q7. What is the difference between Collection API and Stream API?
+	1. Collection API was introduced in jdk 1.2 while Stream API is introduced in jdk 1.8
+	2. Collection objects are created eagerly while Stream API objects are created lazily.
+	3. Iterate and Consume elements at any number of times for Collection object while iterate and consume elements only one time for Stream object.
+	
+Q8.  What is the difference between PermGenSpace and MetaSpace?
+	In jdk 8 onwards PermGenSpace is removed. Earlier PermGenSpace is used for storing the metadata. Metadata means storing the information about classes like bytecodes, names and JIT information.
+	Java classes metadata now stored in native heap and this space is called MetaSpace. Metaspace grows automatically by default and will be garbage collected.
+
+	So the major difference between PermGenSpace and MetaSpace is that PermGenSpace was fixed in size and did not grow automatically, but MetaSpace does not have any size constraints.
+	Check : https://blogs.oracle.com/poonam/about-g1-garbage-collector,-permanent-generation-and-metaspace
+	
+https://javahungry.blogspot.com/2018/10/java-8-interview-questions-and-answers.html
+https://www.journaldev.com/8697/javase8-interview-questions-part1
+
+#Collections.removeIf
+
+P1. Print a message using java-8.
+P2. Input a list and print the squares of the eache of the number.
+P3. Input a list of integers and collect all the squares of the even numbers present in the list.
+P4. Input a list and return the summation of all the numbers which is palindrome.
+P5. Sort a list according to the increasing order.
+
+Functional Programming 
+-----------------------
+-> Funtional programming allows programming using expression.
+-> Passing functions as arguments. 
+
+Java 8 Features
+---------------
+-> Lambda Expression
+-> Funtional Interfaces
+-> Default Methods in interface.
+-> Static methods in interface.
+-> Predicate
+-> Consumer
+-> Functions
+-> Method Reference and Constructor Reference
+-> Stream API
+-> Date & Time API(JODA API)
+
+Benefits of Java-8 
+------------------
+1. It enables functional programming i.e allows programming using expression.
+2. To make more resourceful usage interms of hardware usage using parallel streams api, i.e to enable parallel programming.
+3.
+
+Lambda Expression (->)
+----------------------
+-> Lambda expression is a function that can be passed around and referenced as an object.
+-> Lambda Expression is a block of code without any name, with or without parameters and with or without results. This block of code is executed on demand.
+Anonymous functions is known as Lambda Expression.
+ -> Not having name
+ -> Not having modifiers.
+ -> Not having return type.
+ 
+Benefits : Using Lambda Expression following things are possible :
+-> Enable funtional programming.
+-> We can use procedure, and can pass procedure/functions as argurment.
+-> We can assign procedure to a variable. 
+-> Writing more maintainable and consized code.
+
+Funtional Interfaces (Single Abstract method - SAM)
+---------------------
+The interface that contains only single abstract method.
+Examples of Functional interfaces :
+ 1. Runnable, Callable, ActionListener interfaces.
+Note : We can have any number of default methods or static methods but not any additional abstract method.
+
+-> If we include @FuntionalInterface annotation, then if we try to add any additional abstract method then compiler will flag an error and will not allow any new abstract method, with error "Unexpected @FuntionalInterface annotation, multiple non-overriding abstract methods present in interface."
+-> The purpose of adding @FuntionalInterface is to indicate that the interface is functional interface.
+-> If no abstract method is present, then also compiler will flag error saying "Unexpected @FuntionalInterface annotation, with no abstract method present."
+
+Purpose of FunctionalInterface : By using functional interfaces we can make call to the Lambda expressions.
+
+FunctionalInterface wrt to Inheritance 
+=======================================
+Case-1 : If an interface extends FunctionalInterface and child interface does not contain any abstract method, then child interface is always functional interface.
+
+Case-2 : In the child interface, we can define exactly same parent interface abstract method, child interface can be treated as FunctionalInterface.
+
+Case-3 : In the child interface, we can't define any new abstract methods otherwise we will get compilation error.
+
+
+
+

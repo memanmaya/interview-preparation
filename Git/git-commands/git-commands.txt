@@ -1,0 +1,55 @@
+Commands to deal with newly created repository
+-----------------------------------------------
+git init
+- Initialize the local directory as git repository
+
+git remote add origin https://github.com/manmaya/Git-Commands.git
+- Adding the repository URL which can be used to initialize the remote repository
+- Sets the new remote repository
+
+git remote -v
+- Verifies the remote urls for git push and git pull
+
+git push origin master
+- Pushes the changes in your local repository up to the remote repository you specified as the origin
+
+
+=================================================
+git status
+- To check the changed files and changes are not staged for commit
+
+git commit 
+- Opens the file in an editor, in order to add multiline comments.
+
+git commit -m "Message Content"
+- Enables to commit the staged files with the given inline comment .
+
+git commit -am "Command to add multiple tracked files and commit the changes in one step"
+- Enables us to add multiple tracked files and commit the changes in one step
+
+git add <file-name1 file-name2 file-name3>
+- To add one or multiple files separated by space.
+
+git add . 
+- To add all the tracked modified files, with wild card.
+
+
+=======================================
+Branch Related Commands 
+---------------------------------------
+git branch 
+- To view all the available local branch
+
+git branch -a
+- To view both local and remote branches
+
+Command to create a branch in local repo and pushing it to remote repository
+
+Step-1 : Create a new branch:
+	git checkout -b feature_branch_name (This command will change the branch if available or else it will create a new branch in the local)
+	
+	git branc <branch-name> : This command will create a new branch in the local
+Step-2 : Edit, add and commit your files.
+
+Step-3 : Push your branch to the remote repository:
+	git push -u origin feature_branch_name  (To push the changes into the remote repository)

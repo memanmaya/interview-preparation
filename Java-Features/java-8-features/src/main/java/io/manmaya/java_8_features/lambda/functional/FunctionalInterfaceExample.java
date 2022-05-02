@@ -7,7 +7,7 @@ public interface FunctionalInterfaceExample {
 	public default void show() {
 		System.out.println("This is the sample show method ");
 	}
-	//public void show(); //Will flag error, showing FunctionalInterfcaeExample is not functional interface
+	//public void show1(); //Will flag error, showing FunctionalInterfcaeExample is not functional interface
 }
 
 //An interface is considered as functional interface, if there is only one abstract method, but additionally it can contain static and default methods.

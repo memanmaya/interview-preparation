@@ -3,9 +3,9 @@ package io.manmaya.java_8_features.interfaces;
 public class StaticAndDefaultInterface implements ParentInterface2,ParentInterface{
 	
 	int x = 10;
-	/*public void show1() {
+	public void show1() {
 		System.out.println("I am overriden default method");
-	}*/
+	}
 	
 	public static void main(String[] args) {
 		ParentInterface pi = new StaticAndDefaultInterface();
@@ -18,6 +18,7 @@ public class StaticAndDefaultInterface implements ParentInterface2,ParentInterfa
 		System.out.println(pi.x);
 		
 		pi.show1();
+		ParentInterface.show();
 	}
 
 }
@@ -50,7 +51,7 @@ interface ParentInterface2{
 		System.out.println("I am static show of ParentInterface2");
 	}
 	
-	/*default public void show1() {
+	default public void show1() {
 		System.out.println("I am default show of ParentInterface2");
-	}*/
+	}
 }
